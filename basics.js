@@ -100,11 +100,11 @@ var animal = {
   age:7,
   gender:"female",
   favoriteFood:"cookies",
-  sound:"Meeyoh",
+  sound:"Meeyow",
   speech: function() {
     return(animal.sound);
 
-  },
+  }
 
 
 };
@@ -150,8 +150,11 @@ return(obj);
 // 7. Create a function called keyLoop that takes in an object and loops through each of the key values. If any of the key values are equal to "monkey", then return "There's a monkey!", otherwise return "There's no monkey here!".
 
 function keyLoop(obj) {
-for (var i = 0 ; i < obj.length - 1; i++) {
-      if (obj[i] == "monkey") {
+
+listKeys = Object.keys(obj);
+
+for (var i = 0 ; i < listKeys.length; i++) {
+      if (listKeys[i] == "monkey") {
 
         return("There's a monkey!");
 
